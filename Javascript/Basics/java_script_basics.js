@@ -87,3 +87,24 @@ for (let index = 0; index < 15; index++) {
 var guestList = ["Bill", "Bob", "Jack", "Jill"];
 var number = Math.floor(Math.random() * guestList.length)
 console.log(guestList[0])
+
+function fibonacciGenerator (n) {
+    var result = [];
+    if (n === 1){
+        result = [0];
+    }
+    else if (n === 2){
+        result = [0,1];
+    }
+    else {
+        result = [0,1]
+        for (let i = 2; i < n; i++) {
+            // Sum last two values
+            result.push(result[result.length - 2] + result[result.length - 1]);
+        }
+    }
+    return result;
+}
+
+console.log(fibonacciGenerator(10));
+

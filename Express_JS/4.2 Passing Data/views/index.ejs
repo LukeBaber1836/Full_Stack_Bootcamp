@@ -9,9 +9,21 @@
 
 <body>
   <!-- Write your code here -->
+<<<<<<< HEAD
   <form action="/submit" method="POST">
     <input type="text" name="fName" placeholder="First name">
     <input type="text" name="lName" placeholder="Last name">
+=======
+  <% if (locals.numberOfLetters) { %>
+  <h1> You have <%= locals.numberOfLetters %> letters in your name.</h1>
+  <% } else { %>
+    <h1>Enter your name below.</h1>
+    <% } %>
+    
+  <form action="/submit" method="POST">
+    <input type="text" name="fName" placeholder="">
+    <input type="text" name="lName" placeholder="">
+>>>>>>> ec9a788b1c77e79a63e1756973f684d8105bac28
     <input type="submit" value="OK">
   </form>
 </body>

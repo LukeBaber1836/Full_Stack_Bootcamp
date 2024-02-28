@@ -58,4 +58,3 @@ Throughout the course, I completed over 32 real-world projects, including but no
 The Complete Web Development Bootcamp provided me with the knowledge and skills necessary to become a proficient full-stack web developer. I am excited to apply what I've learned to create innovative web applications and further my career in the field of web development.
 
 Feel free to explore the projects I've completed during the course, and don't hesitate to reach out if you have any questions or feedback!
-s

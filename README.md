@@ -41,7 +41,7 @@ The Complete Web Development Bootcamp is a 62+ hour course designed to take lear
 
 ## Projects
 Throughout the course, I completed over 32 real-world projects, including but not limited to:
-- [Project 1 Name]
+- [DrinkMixer](https://drinkmixer.fly.dev/)
 - [Project 2 Name]
 - [Project 3 Name]
 - ...

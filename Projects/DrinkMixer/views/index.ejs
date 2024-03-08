@@ -1,0 +1,68 @@
+<!-- Nav bar -->
+<%- include("partials/navbar.ejs") %>
+
+<div class="container-lg py-5 col-6 flex-wrap gap-3" id="main">
+  <div class="row py-3 text-center">
+    <div class="col-12 py-5 ">
+      <h1 id="title">Welcome to Drink<span class="green">mixer</span>!</h1>
+      <p>Looking to <span class="home-color">shake</span> up your beverage routine? You're in the right place!🍹</p>
+    </div>
+    
+    <div class="col-12 mx-auto py-5 d-flex justify-content-center" id="champagne">
+      <div>
+        <dotlottie-player 
+          src="https://lottie.host/b863bd9f-9ebe-450e-9e36-ae6f6d4a613c/1i8PnoyBt8.json" 
+          background="transparent" 
+          speed=".5"
+          style="width: 300px; height: 300px;" 
+          loop autoplay>
+        </dotlottie-player>
+      </div>
+    </div>
+
+    <div class="col-12 py-3">
+      <h2>What is Drink<span class="green">mixer</span>?</h2>
+      <p>
+        Drinkmixer is your personal mixologist in the digital world! Whether you're 
+        craving a refreshing mocktail or a boozy cocktail, Drinkmixer has you covered. 
+        Simply tell us your preferences, and we'll whip up a custom drink recipe just 
+        for you!
+      </p>
+    </div>
+
+    <div class="col-6 container-md py-3">
+      <h2>How it Works:</h2>
+      <ol>
+        <li><span class="green larger">Your Ingredients:</span> Have some ingredients lying around and not sure what to do with them? Just tell us what you've got, and we'll craft a delicious drink using those ingredients!</li>
+        <li><span class="green larger">Name Your Drink:</span> Feeling creative? Give your drink a name, and we'll conjure up a recipe to match its vibe!</li>
+        <li><span class="green larger">Alcoholic or Non-Alcoholic:</span> Whether you're sipping solo or hosting a party, choose between alcoholic or non-alcoholic options to suit any occasion!</li>
+      </ol>
+    </div>
+
+    <div class="col py-3" id="lemonaid">
+      <dotlottie-player 
+        src="https://lottie.host/b8392385-4a94-4ab7-bee4-bc94b23a6d22/Rr4xqqh5Ul.json" 
+        background="transparent" 
+        speed="0.5" 
+        style="width: 300px; height: 300px;"
+        loop autoplay>
+      </dotlottie-player>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col text-center py-5 h100">
+      <a class="btn btn-primary-emphasis click" href="/random" role="button">Surprise Me!</a>
+    </div>
+  </div>
+  
+</div>
+
+<!-- Footer -->
+<%- include("partials/footer.ejs") %>
+
+    <!-- JQuery and Bootstrap js links -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

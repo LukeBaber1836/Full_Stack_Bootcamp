@@ -1,0 +1,98 @@
+html, body {
+    min-height: 100%;
+}
+
+/* Cursor Customization */
+html{
+    cursor: url('../images/alt-cursor.png'),auto;
+}
+
+.click{
+    cursor: url('../images/pointer-cursor.png'),pointer;
+}
+
+.text-select{
+    cursor: url('../images/text-select-cursor.png'),pointer;
+}
+
+#main {
+    height: auto;
+}
+
+.green{
+    color: #2ec78d;
+}
+
+.larger{
+    font-size: 1.2rem;
+}
+
+.teal{
+    color: #30c3d6;
+}
+
+.btn {
+    background-color: #23a372;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 30px;
+    margin: 2px 2px;
+    transition: 0.5s;
+}
+
+.nav-link {
+    color: whitesmoke;
+    transition: 0.5s;
+}
+
+.recipe-container {
+    border: solid grey .5px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+#drink-image {
+    size: inherit;
+    z-index: 1;
+    max-width: 400px;
+    border-radius: 20px;
+}
+
+.box-decoration {
+    width: 400px;
+    height: 400px;
+    border-radius: 25px;
+    background-color:#2eb5c7;
+    z-index: -1;
+    top: 20px;
+    right: 170px;
+
+}
+
+/* Animations */
+#title{
+    display: inline-block;
+    margin: 0 0.5rem;
+    animation: fadeInLeft;
+    animation-duration: 2s;
+    --animate-delay: 1s;
+}
+
+#logo {
+    display: inline-block;
+    margin: 0 0.5rem;
+    animation: wobble;
+    animation-duration: 1s;
+}
+
+.nav-link:hover {
+    color: #2eb5c7;
+}
+
+.btn:hover {
+    background-color: #2eb5c7;
+    color: white;
+    padding: 12px 30px;
+}

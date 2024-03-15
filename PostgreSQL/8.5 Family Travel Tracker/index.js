@@ -2,6 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
 
+
 const app = express();
 const port = 3000;
 
@@ -18,11 +19,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 let currentUserId = 1;
-
-// let users = [
-//   { id: 1, name: "Angela", color: "teal" },
-//   { id: 2, name: "Jack", color: "powderblue" },
-// ];
 
 async function users(){
   const result = await db.query(

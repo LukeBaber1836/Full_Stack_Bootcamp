@@ -27,7 +27,6 @@ The Complete Web Development Bootcamp is a 62+ hour course designed to take lear
 - Databases and SQL
 - PostgreSQL
 - Authentication
-- Firebase
 
 ### Additional Technologies
 - React.js
@@ -40,10 +39,8 @@ The Complete Web Development Bootcamp is a 62+ hour course designed to take lear
 - NFT Minting, Buying, and Selling Logic
 
 ## Projects
-Throughout the course, I completed over 32 real-world projects, including but not limited to:
+Throughout the course, I completed over 32 real-world projects, including but not limited to (More to come, finishing up deploying remaining projects):
 - [DrinkMixer](https://drinkmixer.fly.dev/)
-- [Project 2 Name]
-- [Project 3 Name]
 - ...
 
 ## Resources

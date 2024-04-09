@@ -1,24 +1,27 @@
 import express from "express";
 import axios from "axios";
 import path from "path";
+import bodyParser from "body-parser";
 import { fileURLToPath } from 'url';
 
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const app = express();
-const port = 8080;
+const app = express(express.static("public"));
+const port = 3000;
 const API_URL = "https://www.thecocktaildb.com/api/json/v1/1";
 
 // Fixes MIME error -> helps specify correct path
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.get("/", (req, res) =>{
   res.render("index.ejs");
 });
 
-app.get("/random", async (req, res) => {
+app.get("/drink", async (req, res) => {
     try {
         const result = await axios.get(API_URL + "/random.php");
         let drinkInfo = result.data.drinks[0];
@@ -43,20 +46,33 @@ app.get("/random", async (req, res) => {
     }
 });
 
-app.get("/features", (req, res) =>{
+app.get("/features", (req, res) => {
   res.render("features.ejs");
 });
 
-app.get("/about", (req, res) =>{
+app.get("/about", (req, res) => {
   res.render("about.ejs");
 });
 
-app.get("/login", (req, res) =>{
-  res.render("login.ejs");
+app.get("/search", (req, res) => {
+  console.log("get");
+  res.render("search.ejs");
 });
 
-app.get("/signup", (req, res) =>{
-  res.render("signup.ejs");
+app.post("/search", async (req, res) => {
+  console.log(req.body['drinkName']);
+
+  const name = req.body['drinkName'];
+
+  try {
+    const result = await axios.get(API_URL + `/search.php?s=${name}`);
+    console.log(result.data['drinks'].length);
+
+    res.render("search.ejs", { drink: result.data['drinks']});
+  } catch (error) {
+    console.log(error.message);
+    res.render("search.ejs");
+  }
 });
 
 app.listen(port, () => {

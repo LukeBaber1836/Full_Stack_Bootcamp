@@ -1,10 +1,9 @@
 <!-- Nav bar -->
 <%- include("partials/navbar.ejs") %>
 
-<div class="container-lg py-5 col-2-8 flex-wrap" id="main">
+<div class="container py-5" id="main">
 
-  <div class="row recipe-container py-3">
-    
+  <div class="row recipe-container py-5">
     <% if (locals.drink) {%>
       <%- include("partials/recipe.ejs") %>
     <% } else { %>
@@ -13,8 +12,8 @@
   </div>
 
   <div class="row">
-    <div class="col text-center py-5 h100 pointer">
-      <a class="btn btn-primary-emphasis click" href="/random" role="button">Surprise Me!</a>
+    <div class="container text-center py-5 ">
+      <a class="btn btn-primary-emphasis shadow-xl click" href="/random" role="button">Surprise Me!</a>
     </div>
   </div>
 

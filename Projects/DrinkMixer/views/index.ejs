@@ -1,26 +1,25 @@
 <!-- Nav bar -->
 <%- include("partials/navbar.ejs") %>
 
-<div class="container-lg py-5 col-6 flex-wrap gap-3" id="main">
+<div class="container py-5 col-xxl-4 col-md-7 col-sm-12 flex-wrap" id="main">
   <div class="row py-3 text-center">
-    <div class="col-12 py-5 ">
+    <div class="container py-5 ">
       <h1 id="title">Welcome to Drink<span class="green">mixer</span>!</h1>
       <p>Looking to <span class="home-color">shake</span> up your beverage routine? You're in the right place!🍹</p>
     </div>
     
-    <div class="col-12 mx-auto py-5 d-flex justify-content-center" id="champagne">
-      <div>
-        <dotlottie-player 
-          src="https://lottie.host/b863bd9f-9ebe-450e-9e36-ae6f6d4a613c/1i8PnoyBt8.json" 
-          background="transparent" 
-          speed=".5"
-          style="width: 300px; height: 300px;" 
-          loop autoplay>
-        </dotlottie-player>
-      </div>
+
+    <div class="py-5 d-flex justify-content-center" id="champagne">
+      <dotlottie-player 
+        src="https://lottie.host/b863bd9f-9ebe-450e-9e36-ae6f6d4a613c/1i8PnoyBt8.json" 
+        background="transparent" 
+        speed=".5"
+        style="width: 300px; height: 300px;" 
+        loop autoplay>
+      </dotlottie-player>
     </div>
 
-    <div class="col-12 py-3">
+    <div class="row py-5" id="about">
       <h2>What is Drink<span class="green">mixer</span>?</h2>
       <p>
         Drinkmixer is your personal mixologist in the digital world! Whether you're 
@@ -30,30 +29,43 @@
       </p>
     </div>
 
-    <div class="col-6 container-md py-3">
-      <h2>How it Works:</h2>
-      <ol>
-        <li><span class="green larger">Your Ingredients:</span> Have some ingredients lying around and not sure what to do with them? Just tell us what you've got, and we'll craft a delicious drink using those ingredients!</li>
-        <li><span class="green larger">Name Your Drink:</span> Feeling creative? Give your drink a name, and we'll conjure up a recipe to match its vibe!</li>
-        <li><span class="green larger">Alcoholic or Non-Alcoholic:</span> Whether you're sipping solo or hosting a party, choose between alcoholic or non-alcoholic options to suit any occasion!</li>
-      </ol>
+    <div class="row py-5" id="features">
+      <div class="col-lg-8 col-md-12">
+        <h2>How it Works:</h2>
+        <ul style="list-style-type: none;">
+          <li><span class="green larger">Your Ingredients:</span> Have some ingredients lying around and not sure what to do with them? Just tell us what you've got, and we'll craft a delicious drink using those ingredients!</li>
+          <li><span class="green larger">Name Your Drink:</span> Feeling creative? Give your drink a name, and we'll conjure up a recipe to match its vibe!</li>
+          <li><span class="green larger">Alcoholic or Non-Alcoholic:</span> Whether you're sipping solo or hosting a party, choose between alcoholic or non-alcoholic options to suit any occasion!</li>
+        </ul>
+      </div>
+  
+      <div class="col-lg-4 col-md-12 px-3" id="lemonaid">
+        <dotlottie-player
+          class="position-relative top-50 start-50 translate-middle" 
+          src="https://lottie.host/b8392385-4a94-4ab7-bee4-bc94b23a6d22/Rr4xqqh5Ul.json" 
+          background="transparent" 
+          speed="0.5" 
+          style="width: 300px; height: 300px;"
+          loop autoplay>
+        </dotlottie-player>
+      </div>
     </div>
 
-    <div class="col py-3" id="lemonaid">
-      <dotlottie-player 
-        src="https://lottie.host/b8392385-4a94-4ab7-bee4-bc94b23a6d22/Rr4xqqh5Ul.json" 
-        background="transparent" 
-        speed="0.5" 
-        style="width: 300px; height: 300px;"
-        loop autoplay>
-      </dotlottie-player>
-    </div>
   </div>
 
-  <div class="row">
-    <div class="col text-center py-5 h100">
-      <a class="btn btn-primary-emphasis click" href="/random" role="button">Surprise Me!</a>
+  <div class="row py-3">
+    <div class="col-xl-4 col-lg-6 col-sm-12 text-center mb-5">
+      <a class="btn btn-primary-emphasis shadow-lg click" href="/random" role="button">Surprise Me!</a>
     </div>
+    
+    <div class="text-center center-content col-xl-8 col-lg-6 col-sm-12">
+      <form class="py-2 mb-3" action="/search" method="POST">
+          <input type="text" name="drinkName" class="form-control rounded-5 text-select" id="text" placeholder="Search by drink name">
+          <label for="text" class="form-label"><a class="green click" href="/search">Advanced Search</a></label>
+      </form>
+    </div>
+
+
   </div>
   
 </div>

@@ -1,5 +1,5 @@
 <!-- Recipe Display -->
-<div class="col-5 py-3">
+<div class="col-lg-5 col-sm-10 py-3">
   <h2><%= locals.drink %></h2>
   <p>Type: <span class="teal"><%= locals.type %></span></p>
   <p>Category: <span class="teal"><%= locals.category %></span></p>
@@ -13,14 +13,14 @@
   </ul>
 </div>
 
-<div class="position-relative col-7 mx-auto p-2">
-  <div>
-      <div class="mx-auto" style="width: 400px; height: 400px;">
-        <img src="<%= locals.image %>" class="img-fluid shadow-lg mb-3" id="drink-image" alt="picture of a drink">
-      </div>
-
-      <div class="box-decoration position-absolute">
-        <span class="visually-hidden">Accent Box</span>
+<div class="col-lg-7 col-sm-12 p-2 d-flex justify-content-center">
+  <div class="row mb-1">
+      <div class="mx-auto z-2" style="width: 400px; height: 400px;">
+        <img 
+          src="<%= locals.image %>" 
+          class="img-fluid shadow-lg mb-3"
+          id="drink-image"
+          alt="picture of a drink">
       </div>
   </div>
   

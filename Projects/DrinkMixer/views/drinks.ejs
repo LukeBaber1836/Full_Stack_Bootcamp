@@ -1,13 +1,21 @@
 <!-- Nav bar -->
 <%- include("partials/navbar.ejs") %>
 
+
+
 <div class="container py-5" id="main">
+
+    <div class="d-flex justify-content-center col-12">
+        <form class="py-2 mb-3" action="/drinks" method="POST">
+            <input type="text" name="drinkName" class="form-control rounded-5 text-select" id="text" placeholder="Search by drink name">
+        </form>
+    </div>
 
   <%- include("partials/recipe") %>
 
   <div class="row">
     <div class="container text-center py-5 ">
-      <a class="btn btn-primary-emphasis shadow-xl click" href="/random" role="button">Surprise Me!</a>
+      <a class="btn btn-primary-emphasis shadow-xl click" href="/drinks" role="button">Surprise Me!</a>
     </div>
   </div>
 </div>

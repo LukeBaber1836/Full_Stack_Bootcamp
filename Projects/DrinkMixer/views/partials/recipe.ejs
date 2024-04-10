@@ -1,27 +1,38 @@
 <!-- Recipe Display -->
-<div class="col-lg-5 col-sm-10 py-3">
-  <h2><%= locals.drink %></h2>
-  <p>Type: <span class="teal"><%= locals.type %></span></p>
-  <p>Category: <span class="teal"><%= locals.category %></span></p>
-  <p>Glass: <span class="teal"><%= locals.glass %></span></p>
-  <p>Instructions: <%= locals.instructions %></p>
-  <p>Ingredients:</p>
-  <ul>
-    <% for (let index = 0; index < locals.ingredients.length; index++) { %>
-      <li><%= measurements[index] + " - " + ingredients[index]; %></li>
-    <% } %>
-  </ul>
-</div>
 
-<div class="col-lg-7 col-sm-12 p-2 d-flex justify-content-center">
-  <div class="row mb-1">
-      <div class="mx-auto z-2" style="width: 400px; height: 400px;">
-        <img 
-          src="<%= locals.image %>" 
-          class="img-fluid shadow-lg mb-3"
-          id="drink-image"
-          alt="picture of a drink">
+<% if (locals.recipe) {%>
+  <% for (let index = 0; index < locals.recipe.length; index++) { %>
+    <% const element = locals.recipe[index]; %>
+    <div class="row recipe-container py-5 mb-3">
+      <div class="col-lg-5 col-sm-10 py-3">
+        <h2><%= element["drink"] %></h2>
+        <p>Type: <span class="teal"><%= element["type"] %></span></p>
+        <p>Category: <span class="teal"><%= element["category"] %></span></p>
+        <p>Glass: <span class="teal"><%= element["glass"] %></span></p>
+        <p>Instructions: <%= element["instructions"] %></p>
+        <p>Ingredients:</p>
+        <ul>
+          <% for (let i = 0; i < element["ingredients"].length; i++) { %>
+            <li><%= element["measurements"][i] + " - " + element["ingredients"][i]; %></li>
+          <% } %>
+        </ul>
       </div>
+      
+      <div class="col-lg-7 col-sm-12 p-2 d-flex justify-content-center">
+        <div class="row mb-1">
+            <div class="mx-auto z-2" style="width: 400px; height: 400px;">
+              <img 
+                src="<%= element["image"] %>" 
+                class="img-fluid shadow-lg mb-3"
+                id="drink-image"
+                alt="picture of a drink">
+            </div>
+        </div>
+      </div>
+    </div>
+  <% } %>
+<% } else { %>
+  <div class="row py-5"></div>
+    <h1>Content could not load</h1>
   </div>
-  
-</div>
+<% }%>

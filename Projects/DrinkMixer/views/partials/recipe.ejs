@@ -1,6 +1,6 @@
 <!-- Recipe Display -->
 
-<% if (locals.recipe) {%>
+<% if (locals.recipe && locals.recipe.length != 0) {%>
   <% for (let index = 0; index < locals.recipe.length; index++) { %>
     <% const element = locals.recipe[index]; %>
     <div class="row recipe-container py-5 mb-3">
@@ -20,7 +20,7 @@
       
       <div class="col-lg-7 col-sm-12 p-2 d-flex justify-content-center">
         <div class="row mb-1">
-            <div class="mx-auto z-2" style="width: 400px; height: 400px;">
+            <div class="mx-auto">
               <img 
                 src="<%= element["image"] %>" 
                 class="img-fluid shadow-lg mb-3"
@@ -31,8 +31,13 @@
       </div>
     </div>
   <% } %>
-<% } else { %>
-  <div class="row py-5"></div>
-    <h1>Content could not load</h1>
+<% } else if (locals.recipe && locals.recipe.length == 0) { %>
+  <div class="row py-5 d-flex justify-content-center">
+    <h2 class="" id="title">No drinks were found... 😢</h2>
   </div>
-<% }%>
+
+<% } else { %>
+  <div class="row py-5 d-flex justify-content-center">
+    <h2 class="" id="title">Apply filters to search for drinks 👆</h2>
+  </div>
+<% } %>
